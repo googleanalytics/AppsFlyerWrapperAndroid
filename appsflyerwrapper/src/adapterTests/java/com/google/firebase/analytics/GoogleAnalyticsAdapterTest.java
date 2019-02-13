@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.firebase.analytics;
+package java.com.google.firebase.analytics;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -21,6 +21,10 @@ import static org.mockito.Mockito.verify;
 
 import android.content.Context;
 import android.os.Bundle;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.analytics.GoogleAnalyticsAdapter;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -42,7 +46,8 @@ public class GoogleAnalyticsAdapterTest {
 
   GoogleAnalyticsAdapter adapter;
 
-  @Mock FirebaseAnalytics firebaseAnalytics;
+  @Mock
+  com.google.firebase.analytics.FirebaseAnalytics firebaseAnalytics;
   @Mock Context context;
 
   @Before

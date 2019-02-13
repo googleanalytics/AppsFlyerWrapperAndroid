@@ -20,11 +20,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    sourceSets {
-        androidTest {
-            java.srcDirs = ['src/adapterTests', 'src/appsFlyerWrapperTests']
-        }
-    }
 }
 
 dependencies {
@@ -34,17 +29,10 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation 'com.android.support:design:27.1.1'
 
-    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation project(':appsflyerwrapper')
 
     implementation 'com.appsflyer:af-android-sdk:4.8.14@aar'
     implementation 'com.android.installreferrer:installreferrer:1.0'
-
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-android:2.8.9'
-
-    androidTestImplementation 'org.mockito:mockito-android:2.8.9'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
 apply plugin: 'com.google.gms.google-services'

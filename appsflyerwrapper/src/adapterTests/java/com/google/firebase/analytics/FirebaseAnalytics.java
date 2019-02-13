@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.firebase.analytics;
+package java.com.google.firebase.analytics;
 
 import android.content.Context;
 import android.os.Bundle;

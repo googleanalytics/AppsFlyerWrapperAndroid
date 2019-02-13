@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.firebase.analytics;
+package java.com.google.firebase.analytics;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -26,6 +26,9 @@ import com.appsflyer.AFInAppEventParameterName;
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
 import com.appsflyer.AppsFlyerTrackingRequestListener;
+import com.google.firebase.analytics.AppsFlyerLibWrapper;
+import com.google.firebase.analytics.GoogleAnalyticsAdapter;
+
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Before;
@@ -39,7 +42,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class AppsFlyerLibWrapperTest {
 
-  @Mock GoogleAnalyticsAdapter googleAnalyticsAdapter;
+  @Mock
+  GoogleAnalyticsAdapter googleAnalyticsAdapter;
   @Mock AppsFlyerLib appsFlyerLib;
   AppsFlyerLibWrapper wrapper = new MockAppsFlyerLibWrapper();
 

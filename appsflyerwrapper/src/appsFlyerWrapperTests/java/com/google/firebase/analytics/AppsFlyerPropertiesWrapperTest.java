@@ -12,13 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.firebase.analytics;
+package java.com.google.firebase.analytics;
 
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
 import android.content.Context;
 import com.appsflyer.AppsFlyerProperties;
+import com.google.firebase.analytics.AppsFlyerPropertiesWrapper;
+import com.google.firebase.analytics.GoogleAnalyticsAdapter;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +33,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class AppsFlyerPropertiesWrapperTest {
 
-  @Mock GoogleAnalyticsAdapter googleAnalyticsAdapter;
+  @Mock
+  GoogleAnalyticsAdapter googleAnalyticsAdapter;
   @Mock AppsFlyerProperties appsFlyerProperties;
   AppsFlyerPropertiesWrapper wrapper = new MockAppsFlyerPropertiesWrapper();
 
