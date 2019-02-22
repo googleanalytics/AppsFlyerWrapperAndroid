@@ -17,7 +17,7 @@ In order to use the AppsFlyer wrapper:
 3.  Replace supported references to `AppsFlyerLib.getInstance()` with
     `AppsFlyerLibWrapper.getInstance()`, and references to
     `AppsFlyerProperties.getInstance()` with
-    `AppsFlyerPropertiesWrapper.getInstance()'.
+    `AppsFlyerPropertiesWrapper.getInstance()`.
 
 Some methods are not supported by the wrapper. For these methods, directly call
 the base implementation in `AppsFlyerLib.getInstance()` or
