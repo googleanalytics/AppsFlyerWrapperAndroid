@@ -10,10 +10,9 @@ backends.
 
 In order to use the AppsFlyer wrapper:
 
-1.  [Follow the steps here](https://firebase.google.com/docs/analytics/ios/start)
+1.  [Follow the steps here](https://firebase.google.com/docs/analytics/android/start)
     to set up the Google Analytics for Firebase SDK in your app.
-2.  Copy the source files inside the AppsFlyerWrapper directory (ignoring
-    subdirectories) into your project.
+2.  Copy the source files inside the AppsFlyerWrapper directory into your project.
 3.  Replace supported references to `AppsFlyerLib.getInstance()` with
     `AppsFlyerLibWrapper.getInstance()`, and references to
     `AppsFlyerProperties.getInstance()` with
