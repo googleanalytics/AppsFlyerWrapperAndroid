@@ -94,6 +94,14 @@ public class AppsFlyerPropertiesWrapperTest {
         .setUserProperty(ArgumentMatchers.eq("key"), ArgumentMatchers.eq("true"));
   }
 
+  @Test
+  public void testRemove() {
+    wrapper.remove("key");
+    verify(appsFlyerProperties).remove(ArgumentMatchers.eq("key"));
+    verify(googleAnalyticsAdapter)
+        .setUserProperty(ArgumentMatchers.eq("key"), ArgumentMatchers.isNull());
+  }
+
   class MockAppsFlyerPropertiesWrapper extends AppsFlyerPropertiesWrapper {
     @Override
     GoogleAnalyticsAdapter getGoogleAnalytics() {
