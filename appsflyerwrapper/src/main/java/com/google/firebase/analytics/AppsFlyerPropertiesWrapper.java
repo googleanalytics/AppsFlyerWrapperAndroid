@@ -67,6 +67,12 @@ public class AppsFlyerPropertiesWrapper {
     setUserProperty(key, Boolean.toString(value));
     getAppsFlyerProperties().set(key, value);
   }
+  
+  /** Wraps calls to {@link AppsFlyerProperties#remove(String)} */
+  public void remove(String key) {
+    setUserProperty(key, null);
+    getAppsFlyerProperties().remove(key);
+  }
 
   /** Wraps call to {@link GoogleAnalyticsAdapter#setUserProperty(String, String)}. */
   private void setUserProperty(String name, String value) {
